@@ -4,6 +4,13 @@ Este padrão cria uma separação marcante entre os dados da aplicação (model)
 sua apresentação (view).
 O controller é responsável por processar as entradas do usuário e atualizar o modelo e a visão de acordo. Esse padrão permite uma melhor organização do código e facilita a manutenção e a escalabilidade da aplicação.
 
+O interessante de separar o Model do View é que é possível ter várias representações visuais de um mesmo modelo sem que estas forcem qualquer alteração no
+modelo.
+
+View: index.html
+Model: Negociacao.js
+Controller: NegociacaoController.js
+
 # Paradigma Orientado ao Objeto
 
 O paradigma orientado a objetos (POO) é baseado no conceito de "objetos", que são instâncias de classes que encapsulam dados e comportamentos relacionados. Ele promove a reutilização de código por meio de herança, permite a abstração ao esconder detalhes internos, e facilita a modularidade e a manutenção do software. Os pilares principais do POO são: encapsulamento, herança, polimorfismo e abstração.
@@ -20,28 +27,6 @@ O paradigma funcional é baseado em funções matemáticas e evita mudanças de 
 - **Imutabilidade**: Dados que não podem ser alterados após sua criação.
 - **Funções de Ordem Superior**: Funções que podem receber outras funções como argumentos ou retorná-las.
 - **Separação de Responsabilidades**: Divisão clara entre diferentes partes do sistema, como no padrão MVC.
-
-## Exemplo de Organização de Arquivos e Pastas
-
-Uma organização comum de arquivos e pastas em projetos é:
-
-```
-project/
-├── src/                # Código-fonte do projeto
-│   ├── models/         # Classes e lógica de dados
-│   ├── views/          # Interfaces de usuário
-│   ├── controllers/    # Lógica de controle
-│   ├── utils/          # Funções utilitárias
-│   └── index.js        # Ponto de entrada da aplicação
-├── tests/              # Testes automatizados
-├── docs/               # Documentação do projeto
-├── config/             # Arquivos de configuração
-├── .gitignore          # Arquivos a serem ignorados pelo Git
-├── package.json        # Dependências e scripts do projeto
-└── README.md           # Documentação inicial do projeto
-```
-
-Essa estrutura ajuda a manter o projeto organizado e facilita a colaboração em equipe.
 
 ## Diferença entre expressões e instruções
 

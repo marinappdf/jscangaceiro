@@ -77,50 +77,8 @@
 
       <tfoot></tfoot>
     </table>
-    <!-- CAP. 2-->
-    <script src="app/domain/negociacao/Negociacao_Cap2.js"></script>
-    <!-- 
-    Para fins de teste.
-    Aqui estamos criando duas instâncias da classe Negociacao e exibindo-as
-    no console para verificar se estão sendo criadas corretamente.
-    Abra o console do navegador (F12) e veja os objetos criados.
-    Em projetos grandes, o ideal é que o código JavaScript seja separado em
-    arquivos diferentes, mas para fins de aprendizado, estamos mantendo tudo
-    em
-    -->
-    <script>
-      //var n1 = new Negociacao();
-      //n1.quantidade = 10;
-      //n1.valor = 100;
-      //n1.data = new Date();
-
-      //var n2 = new Negociacao();
-      //console.log(n2);
-
-      let n1 = new Negociacao(new Date(), 10, 100);
-      // var volume = n1.obtemVolume();
-      let volume = n1.getVolume();
-
-      // Acesso como variável normal, sem restrições
-      /** console.log(n1, volume);
-       console.log(n1.Date)
-       console.log(n1.Quantidade); */
-
-      // Acesso como método, getter
-      /** console.log(n1.getQuantidade());
-      console.log(n1.getData());
-      console.log(n1.getValor()); */
-
-      // Acessar como propriedade, apesar de se um método
-      /** console.log(n1.quantidade);
-      console.log(n1.data);
-      console.log(n1.valor); */
-
-      // Congelar objeto -> Objeto imutável
-      /**
-      Object.freeze(n1);
-      n1.quantidade = 1000; // Não altera o valor
-      */
-    </script>
+    <script src="app/domain/negociacao/Negociacao_Cap3.js"></script>
+    <script src="app/controllers/NegociacaoController.js"></script>
+    <script src="app/app.js"></script>
   </body>
 </html>
