@@ -1,34 +1,35 @@
 class NegociacaoController {
   constructor() {
-    // Chamar no construtor melhora a performance poruqe o código só percorre o DOM uma vez.
-    // realizando o bind, $ mantém document como seu contexto this
     let $ = document.querySelector.bind(document);
     this._inputData = $("#data");
     this._inputQuantidade = $("#quantidade");
     this._inputValor = $("#valor");
+    this._negociacoes = new Negociacoes();
   }
 
   adicionar(event) {
     event.preventDefault();
+    this._negociacoes.adiciona(this._criaNegociacao());
+    this._negociacoes.adiciona(negociacao);
+    // imprime a lista com o novo elemento
+    console.log(this._negociacoes.paraArray());
 
-    // let converter = new DataConverter();
-    // let data = converter.paraData(this._inputData.value);
-    // let negociacao = new Negociacao(
-    //   data,
-    //   parseInt(this._inputQuantidade.value),
-    //   parseFloat(this._inputValor.value)
-    // );
-    // let diaMesAno = converter.paraTexto(negociacao.data);
-    // console.log(diaMesAno);
+    this.limpaFormulario();
+  }
 
-    let negociacao = new Negociacao(
+  _limpaFormulario() {
+    this._inputData.value = "";
+    this._inputQuantidade.value = 1;
+    this._inputValor.value = 0.0;
+    this._inputData.focus();
+  }
+
+  _criaNegociacao() {
+    // retorna uma instância de negociação
+    return new Negociacao(
       DateConverter.paraData(this._inputData.value),
       parseInt(this._inputQuantidade.value),
       parseFloat(this._inputValor.value)
     );
-    console.log(negociacao);
-
-    let diaMesAno = DateConverter.paraTexto(negociacao.data);
-    console.log(diaMesAno);
   }
 }
