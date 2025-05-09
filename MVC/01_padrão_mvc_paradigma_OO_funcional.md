@@ -31,3 +31,5 @@ O paradigma funcional é baseado em funções matemáticas e evita mudanças de 
 ## Diferença entre expressões e instruções
 
 No contexto de programação, uma **expressão** é uma construção que é avaliada para produzir um valor. Por exemplo, `2 + 3` é uma expressão que resulta no valor `5`. Já uma **instrução** é uma construção que realiza uma ação, como atribuir um valor a uma variável ou imprimir algo na tela. Por exemplo, `x = 5` é uma instrução que atribui o valor `5` à variável `x`. No paradigma funcional, o foco está no uso de expressões, enquanto paradigmas imperativos frequentemente utilizam instruções.
+
+---

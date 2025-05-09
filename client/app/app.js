@@ -15,7 +15,9 @@ e vai chamar um método do controller.*/
 
 document
   .querySelector(".form")
-  .addEventListener("submit", controller.adicionar);
+  .addEventListener("submit", controller.adicionar.bind(controller));
+//   .addEventListener("submit", controller.adicionar;
+// Toda função/método possui um this dinâmico que assume como valor o contexto no qual foi chamado -> por isso o uso do bind
 /**
 Quando você escreve `controller.adicionar`, está apenas dizendo ao JavaScript: 
 "Aqui está a função que deve ser chamada quando o evento ocorrer."
