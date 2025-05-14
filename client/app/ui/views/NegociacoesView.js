@@ -1,10 +1,10 @@
-class NegociacoesView {
-  update(model) {
-    this._elemento.innerHTML = this.template(model);
-  }
-  constructor(selector) {
-    this._elemento = document.querySelector(selector);
-  }
+class NegociacoesView extends View {
+  //   update(model) {
+  //     this._elemento.innerHTML = this.template(model);
+  //   }
+  //   constructor(selector) {
+  //     this._elemento = document.querySelector(selector);
+  //   }
 
   template(model) {
     return `

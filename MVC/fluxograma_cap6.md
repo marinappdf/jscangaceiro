@@ -30,7 +30,7 @@ A organização das pastas segue o padrão **MVC (Model-View-Controller)**, que 
 - **app**: Contém a lógica principal da aplicação.
 - **controllers**: centraliza a lógica de controle.
 - **domain**: Define as entidades principais da aplicação.
-- **ui**: Gerencia a interface do usuário.
+- **ui**: Gerencia a conversão do usuário.
   - **converters**: Classes utilitárias para conversão de dados.
     - `DateConverter.js`: Converte datas entre formatos diferentes.
   - **views**: Classes responsáveis pela apresentação dos dados ao usuário.
@@ -94,13 +94,13 @@ Ao abrir a página, as seguintes operações ocorrem:
   1.  Cria a negociação:
 
   - - Puxa os dados do formulário e estrutura eles no modelo `Negociacao`.
-    - Usa a conversão de dados em `DateConverter`.
+    - Usa a conversaão de dados em `DateConverter`.
     - Adicionar a negociação à lista de negociações (gerenciada pela classe `Negociacoes`)
 
   2.  Atualiza o HTML:
 
       - Cria um novo objeto de negociação, para não apagar o anterior.
-      - Usa a conversão de dados em `DateConverter`.
+      - Usa a conversaão de dados em `DateConverter`.
       - Estrutura as Negociações dentro da estrutura de visualização determinada no `NegociacaoView`:
         - Renderiza a lista de negociações no DOM.
       - Utiliza o método `update` para atualizar a tabela de negociações exibida na interface.
